@@ -1,0 +1,17 @@
+<html>
+<body>
+<h1>Welcome</h1>
+<hr>
+<h2>Comments</h2>
+<% if @comments.any? %>
+<ul>
+<% @comments.each do |comment|%>
+<li><%=comment.comment_body%> - <%=comment.created_at%> (<%=comment.name%>)<a> </li>
+<% end %>
+</ul>
+<% end %>
+<ul>
+  <li><a href = '/comments/new'>Create a new comment</a> </li>
+</ul>
+</body>
+</html>

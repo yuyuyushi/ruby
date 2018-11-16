@@ -1,0 +1,15 @@
+<html>
+<body>
+<h2>Comments Management</h2>
+<% if @comments.any? %>
+<ul>
+<% @comments.each do |comment|%>
+<li><a href = '/comments/<%=comment.id%>'><%=comment.comment_body%> - <%=comment.created_at%> (<%=comment.name%>)<a> </li>
+<% end %>
+</ul>
+<% end %>
+<ul>
+  <li><a href = '/comments/new'>Create a new comment</a> </li>
+</ul>
+</body>
+</html>

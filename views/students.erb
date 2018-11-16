@@ -1,0 +1,20 @@
+<html>
+<body>
+<h1>Student List</h1>
+
+<% if @students.any? %>
+<ul>
+	<% @students.each do |student|%>
+ 	<li><a href = '/students/<%=student.stdid%>'><%=student.firstname%> <%=student.lastname%><a> </li>
+ 	<% end %>
+</ul>
+<% else %>
+	<p>No student information yet!</p>
+<% end %>
+<ul style="list-style-type:none">
+	<li><a href = '/students/add'>Add New Student</a> </li>
+</ul>
+</body>
+</html>
+
+
